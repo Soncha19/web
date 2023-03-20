@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Оновити/Видалити/Знайти Користувача</title>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header>
+      <h1>Classifieds Website</h1>
+    </header>
+ <nav>
+      <a href="lab1.html">Home</a>
+	  
+      
+     
+	  <ul>
+      <li><a href="new advert.html">Create Ad</a></li>
+      <li><a href="userpage.html">My profile</a></li>
+      <li><a href="#">Search people</a></li>
+    </ul>
+      <a href="sign in.html">Sign in</a>
+      <a href="sign up.html">Sign up</a>
+    </nav>
+<main class="sign-up">
+	<h1>Here you can update or delete your profile</h1>
+	
+	<!-- Форма для пошуку користувача -->
+<!--	<h2>Search user</h2>-->
+<!--	<form action="/search" method="get">-->
+<!--		<label for="user_id">ID user:</label>-->
+<!--		<input type="text" id="user_id1" name="user_id">-->
+<!--		<br>-->
+<!--		<button type="submit">Search</button>-->
+<!--	</form>-->
+	<!-- Форма для оновлення користувача -->
+	<h2>Update user</h2>
+	<form action="/update" method="post">
+<!--		<label for="user_id">ID user:</label>-->
+<!--		<input type="text" id="user_id" name="user_id" value="Ім'я користувача">-->
+<!--		<br>-->
+		<label for="new_username">Username:</label>
+		<input type="text" id="new_username" name="new_username" value="Ім'я користувача">
+		<br>
+		<label for="new_firstname">First name:</label>
+		<input type="text" id="new_firstname" name="new_firstname" value="Ім'я користувача">
+		
+		<br>
+		<label for="new_lastname">Last name:</label>
+		<input type="text" id="new_lastname" name="new_lastname" value="Ім'я користувача">
+		
+		<br>
+		<label for="new_address">Address:</label>
+		<input type="text" id="new_address" name="new_address" value="Ім'я користувача" >
+		<br>
+		<label for="new_phone">Phone Number:</label>
+		
+		<input type="tel" id="new_phone" name="new_phone" pattern="[0-9]{10}" value="8491709934">
+		<br>
+		<label for="new_email">New email:</label>
+		<input type="email" id="new_email" name="new_email"value="Ім'я@користувача">
+		<br>
+		<button type="submit">Update</button>
+	</form>
+
+	<!-- Форма для видалення користувача -->
+	<h2>Delete user</h2>
+	<form action="/delete" method="post">
+		<label for="user_id">ID user:</label>
+		<input type="text" id="user_id" name="user_id">
+		<br>
+		<button type="submit">Delete</button>
+	</form>
+
+	
+</main>
+</body>
+</html>
