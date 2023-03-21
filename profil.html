@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Пошук користувача</title>
-     <link rel="stylesheet" href="style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Пошук користувача</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <nav>
-      <a href="index.html">Home</a>
-	  
-      
-      
-	  <ul>
-      <li><a href="new advert.html">Create Ad</a></li>
-      <li><a href="userpage.html">My profile</a></li>
-      <li><a href="#">Search people</a></li>
+<header>
+    <h1>Classifieds Website</h1>
+</header>
+<nav>
+    <a href="index.html">Home</a>
+
+
+    <ul>
+        <li><a href="new advert.html">Create Ad</a></li>
+        <li><a href="userpage.html">My profile</a></li>
+        <li><a href="profil.html">Search people</a></li>
     </ul>
-      <a href="sign in.html">Sign in</a>
-      <a href="sign up.html">Sign up</a>
-    </nav>
- <main class="sign-up">
-  <h1>Пошук користувача</h1>
-  <form>
-    <label><input type="radio" name="searchType" value="id" checked> По ID</label><br>
-    <label><input type="radio" name="searchType" value="username"> По юзернейму</label><br><br>
-    <label for="search">Пошук:</label>
-    <input type="text" id="search" name="search"><br><br>
-    <button type="submit">Search</button>
-  </form>
-  </main>
+    <a href="sign in.html">Sign in</a>
+    <a href="sign up.html">Sign up</a>
+</nav>
+<main class="sign-up">
+    <header>
+
+        <h1>Search user</h1>
+    </header>
+
+    <form>
+        <label><input type="radio" name="searchType" value="id" checked> By ID</label><br>
+        <label><input type="radio" name="searchType" value="username"> By username</label><br><br>
+        <label for="search">Search:</label>
+        <input type="text" id="search" name="search"><br><br>
+        <button type="submit">Search</button>
+    </form>
+</main>
 </body>
 </html>

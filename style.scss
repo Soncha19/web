@@ -7,22 +7,37 @@ $main-font: 'Arial', sans-serif;
 
 /* Mixins */
 @mixin button-style {
-background-color: $secondary-color;
-color: #fff;
-padding: 10px 20px;
-margin: 10px;
-border: none;
-border-radius: 5px;
-font-size: 1.2em;
-text-transform: uppercase;
-letter-spacing: 2px;
-transition: all 0.3s ease;
-text-align: center;
+  background-color: $secondary-color;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  text-align: center;
 
-&:hover {
-background-color: darken($secondary-color, 10%);
-cursor: pointer;
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+    cursor: pointer;
+  }
 }
+
+@mixin h2-style {
+  font-size: 2em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+%page-format {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
 }
 
 /* Global styles */
@@ -85,26 +100,24 @@ nav {
 main {
   max-width: 800px;
   margin: 20px auto;
-  .searching{
-  display: flex;
- 
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  
- 
-}
+
+  .searching {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+
+  }
 
   h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-align: center;
+    @include h2-style;
   }
+
   button[type="submit"] {
-      @include button-style;
-    }
+    @include button-style;
+  }
 
   .classifieds {
     display: flex;
@@ -147,20 +160,10 @@ footer {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-/* Sign Up */
-.sign-up {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
 
-  h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
+/* Sign In */
+.signin {
+  @extend %page-format;
 
   form {
     width: 100%;
@@ -169,17 +172,12 @@ footer {
     label {
       display: block;
       margin-bottom: 10px;
+      margin-top: 10px;
       font-weight: bold;
     }
 
     input[type="text"],
-    input[type="email"],
-	input[type="tel"],
-    input[type="password"],
-	input[type="description"],
-	input[type="checkbox"],
-	input[type="search-list"]
-	{
+    input[type="password"] {
       width: 100%;
       padding: 10px;
       margin-bottom: 20px;
@@ -191,100 +189,108 @@ footer {
     button[type="submit"] {
       @include button-style;
     }
-	
   }
 }
-/* Sign In */
-.signin {
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-top: 50px;
 
-h1 {
-font-size: 2em;
-margin-bottom: 20px;
-text-align: center;
-text-transform: uppercase;
-letter-spacing: 2px;
-}
+/* Sign Up */
+.sign-up {
+  @extend %page-format;
 
-form {
-width: 100%;
-max-width: 500px;
-label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
+  h2 {
+    @include h2-style;
+  }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid $border-color;
-  border-radius: 5px;
-  font-size: 1em;
-}
-button[type="submit"] {
+  form {
+    width: 100%;
+    max-width: 500px;
+
+    label {
+      margin-top: 10px;
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"],
+    input[type="description"],
+    input[type="checkbox"],
+    input[type="search-list"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid $border-color;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    button[type="submit"] {
       @include button-style;
     }
+
+  }
 }
-}
+
 /* Responsive Design */
 @media (max-width: 768px) {
-header {
-h1 {
-font-size: 2.5em;
-}
-}
+  header {
+    h1 {
+      font-size: 2.5em;
+    }
+  }
 
-nav {
-flex-direction: column;
-align-items: center;
-a {
-  margin: 5px 0;
-}
-}
+  nav {
+    flex-direction: column;
+    align-items: center;
 
-main {
-.searching{
-  display: flex;
- 
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
- 
-}
-.classifieds {
-.classified {
-width: 100%;
-}
-}
-}
+    a {
+      margin: 5px 0;
+    }
+  }
 
-footer {
-font-size: 0.6em;
-}
+  main {
+    .searching {
+      display: flex;
+
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .classifieds {
+      .classified {
+        width: 100%;
+      }
+    }
+  }
+
+  footer {
+    font-size: 0.6em;
+  }
 }
 
 @media (max-width: 500px) {
-.sign-up,
-.signin {
-h1,h2{font-size: 0.8em;}
-form {
-label {
-font-size: 0.8em;
-}
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  input[type="tel"],
-  input[type="description"] {
-    font-size: 0.8em;
+  .sign-up,
+  .signin {
+    h1, h2 {
+      font-size: 0.8em;
+    }
+
+    form {
+      label {
+        font-size: 0.8em;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="tel"],
+      input[type="description"] {
+        font-size: 0.8em;
+      }
+    }
   }
-}
-}
 }

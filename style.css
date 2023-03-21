@@ -1,5 +1,12 @@
 /* Variables */
 /* Mixins */
+.sign-up, .signin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
 /* Global styles */
 * {
   margin: 0;
@@ -124,25 +131,58 @@ footer {
   text-transform: uppercase;
 }
 
-/* Sign Up */
-.sign-up {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
+/* Sign In */
+.signin form {
+  width: 100%;
+  max-width: 500px;
 }
-.sign-up h2 {
-  font-size: 2em;
+.signin form label {
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.signin form input[type=text],
+.signin form input[type=password] {
+  width: 100%;
+  padding: 10px;
   margin-bottom: 20px;
-  text-align: center;
+  border: 1px solid #F0F0F0;
+  border-radius: 5px;
+  font-size: 1em;
+}
+.signin form button[type=submit] {
+  background-color: #77ACEC;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
   text-transform: uppercase;
   letter-spacing: 2px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+.signin form button[type=submit]:hover {
+  background-color: #4a91e6;
+  cursor: pointer;
+}
+
+/* Sign Up */
+.sign-up h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
 }
 .sign-up form {
   width: 100%;
   max-width: 500px;
 }
 .sign-up form label {
+  margin-top: 10px;
   display: block;
   margin-bottom: 10px;
   font-weight: bold;
@@ -175,57 +215,6 @@ footer {
   text-align: center;
 }
 .sign-up form button[type=submit]:hover {
-  background-color: #4a91e6;
-  cursor: pointer;
-}
-
-/* Sign In */
-.signin {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
-}
-.signin h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-.signin form {
-  width: 100%;
-  max-width: 500px;
-}
-.signin form label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-.signin form input[type=text],
-.signin form input[type=email],
-.signin form input[type=password] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #F0F0F0;
-  border-radius: 5px;
-  font-size: 1em;
-}
-.signin form button[type=submit] {
-  background-color: #77ACEC;
-  color: #fff;
-  padding: 10px 20px;
-  margin: 10px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  transition: all 0.3s ease;
-  text-align: center;
-}
-.signin form button[type=submit]:hover {
   background-color: #4a91e6;
   cursor: pointer;
 }
