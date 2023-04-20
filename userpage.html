@@ -22,7 +22,7 @@
     <a href="sign up.html">Sign up</a>
 </nav>
 <main class="sign-up">
-    <h1>Here you can update or delete your profile</h1>
+
 
     <!-- Форма для пошуку користувача -->
     <!--	<h2>Search user</h2>-->
@@ -34,7 +34,7 @@
     <!--	</form>-->
     <!-- Форма для оновлення користувача -->
     <h2>Update user</h2>
-    <form action="/update" method="post">
+    <form id="update-form" >
         <!--		<label for="user_id">ID user:</label>-->
         <!--		<input type="text" id="user_id" name="user_id" value="Ім'я користувача">-->
         <!--		<br>-->
@@ -59,19 +59,31 @@
         <label for="new_email">New email:</label>
         <input type="email" id="new_email" name="new_email" value="email@lpnu.ua">
         <br>
-        <button type="submit">Update</button>
+        <button type="submit" id="upd">Update</button>
     </form>
 
     <!-- Форма для видалення користувача -->
     <h2>Delete user</h2>
-    <form action="/delete" method="post">
-        <!--		<label for="user_id">ID user:</label>-->
-        <!--		<input type="text" id="user_id" name="user_id">-->
-        <!--		<br>-->
-        <button type="submit">Delete</button>
+    <form id="delete-form">
+
+        <button type="submit" id="delete-button">Delete</button>
     </form>
+<!--    <template>-->
+<!--        <form id="delete-form" @submit.prevent="deleteUser">-->
+<!--            <button type="submit">Delete User</button>-->
+<!--        </form>-->
+<!--    </template>-->
 
 
 </main>
+<script src="updateuser.js"></script>
+<script src="upd.js"></script>
+<script src="deleteuser.js"></script>
+
+<footer>
+    <p>&copy; 2023 Classifieds Website</p>
+</footer>
+
+</script>
 </body>
 </html>

@@ -28,17 +28,17 @@
         <h1 class="headtitle">Login to the site</h1>
     </header>
 
-    <form>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
-        <button type="submit">Sign in</button>
+    <form id="signin-form" >
+        <label for="usr">Username:</label>
+        <input type="text" class="form-control" id="usr" placeholder="Enter username" name="usr">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+        <button onclick="prepLogin()" type="submit" id="123" >Sign in</button>
     </form>
 </main>
 <footer>
-    <p>&copy; 2023 My Website</p>
+    <p>&copy; 2023 Classifieds Website</p>
 </footer>
-
+<script src="loginuser.js"></script>
 </body>
 </html>

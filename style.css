@@ -192,7 +192,6 @@ footer {
 .sign-up form input[type=tel],
 .sign-up form input[type=password],
 .sign-up form input[type=description],
-.sign-up form input[type=checkbox],
 .sign-up form input[type=search-list] {
   width: 100%;
   padding: 10px;
@@ -241,7 +240,13 @@ footer {
     width: 100%;
   }
   footer {
-    font-size: 0.6em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  footer a {
+    margin: 5px;
   }
 }
 @media (max-width: 500px) {
