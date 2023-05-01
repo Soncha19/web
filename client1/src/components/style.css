@@ -1,0 +1,144 @@
+/* Variables */
+/* Mixins */
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  color: #3B3B3B;
+  background-color: #F5F5F5;
+}
+
+a {
+  color: #77ACEC;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+a:hover {
+  color: #3B3B3B;
+}
+
+/* Main content */
+main {
+  max-width: 800px;
+  margin: 20px auto;
+}
+main .searching {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+main h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+main button[type=submit] {
+  background-color: #77ACEC;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+main button[type=submit]:hover {
+  background-color: #4a91e6;
+  cursor: pointer;
+}
+main .classifieds {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main .classifieds .classified {
+  background-color: #fff;
+  box-shadow: 2px 2px #F0F0F0;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: calc(33.33% - 10px);
+  transition: all 0.3s ease;
+}
+main .classifieds .classified:hover {
+  transform: translateY(-5px);
+  box-shadow: 4px 4px #F0F0F0;
+}
+main .classifieds .classified h3 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+main .classifieds .classified p:last-child {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Footer */
+/* Sign In */
+/* Sign Up */
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5em;
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav a {
+    margin: 5px 0;
+  }
+  main .searching {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main .classifieds .classified {
+    width: 100%;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  footer a {
+    margin: 5px;
+  }
+}
+@media (max-width: 500px) {
+  .sign-up h1, .sign-up h2,
+  .signin h1,
+  .signin h2 {
+    font-size: 0.8em;
+  }
+  .sign-up form label,
+  .signin form label {
+    font-size: 0.8em;
+  }
+  .sign-up form input[type=text],
+  .sign-up form input[type=email],
+  .sign-up form input[type=password],
+  .sign-up form input[type=tel],
+  .sign-up form input[type=description],
+  .signin form input[type=text],
+  .signin form input[type=email],
+  .signin form input[type=password],
+  .signin form input[type=tel],
+  .signin form input[type=description] {
+    font-size: 0.8em;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

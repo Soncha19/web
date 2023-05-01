@@ -1,0 +1,43 @@
+/* Variables */
+//#00BFFF
+$primary-color: #3B3B3B;
+$secondary-color: #77ACEC;
+$border-color: #F0F0F0;
+$main-font: 'Arial', sans-serif;
+
+
+
+
+
+/* Header */
+header {
+  background-color: $secondary-color;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+
+  h1 {
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 2px 2px $primary-color;
+  }
+}
+
+/* Navigation */
+nav {
+  background-color: $border-color;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+
+  a {
+    margin-right: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .active {
+    border-bottom: 2px solid $secondary-color;
+  }
+}

@@ -1,0 +1,32 @@
+/* Variables */
+/* Header */
+header {
+  background-color: #77ACEC;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+header h1 {
+  font-size: 3em;
+  margin: 0;
+  text-shadow: 2px 2px #3B3B3B;
+}
+
+/* Navigation */
+nav {
+  background-color: #F0F0F0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+nav a {
+  margin-right: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+nav .active {
+  border-bottom: 2px solid #77ACEC;
+}
+
+/*# sourceMappingURL=style_header.css.map */

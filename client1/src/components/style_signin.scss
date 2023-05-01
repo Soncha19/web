@@ -1,0 +1,270 @@
+/* Variables */
+//#00BFFF
+$primary-color: #3B3B3B;
+$secondary-color: #77ACEC;
+$border-color: #F0F0F0;
+$main-font: 'Arial', sans-serif;
+
+/* Mixins */
+@mixin button-style {
+  background-color: $secondary-color;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  text-align: center;
+
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+    cursor: pointer;
+  }
+}
+
+@mixin h2-style {
+  font-size: 2em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+%page-format {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $main-font;
+  color: $primary-color;
+  background-color: #F5F5F5;
+}
+
+a {
+  color: $secondary-color;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+/* Main content */
+//main {
+//  max-width: 800px;
+//  margin: 20px auto;
+//
+//  .searching {
+//    display: flex;
+//
+//    flex-direction: row;
+//    justify-content: center;
+//    align-items: center;
+//
+//
+//  }
+//
+//  h2 {
+//    @include h2-style;
+//  }
+//
+//  button[type="submit"] {
+//    @include button-style;
+//  }
+//
+//  .classifieds {
+//    display: flex;
+//    flex-wrap: wrap;
+//    justify-content: space-between;
+//
+//    .classified {
+//      background-color: #fff;
+//      box-shadow: 2px 2px $border-color;
+//      padding: 10px;
+//      margin-bottom: 20px;
+//      width: calc(33.33% - 10px);
+//      transition: all 0.3s ease;
+//
+//      &:hover {
+//        transform: translateY(-5px);
+//        box-shadow: 4px 4px $border-color;
+//      }
+//
+//      h3 {
+//        font-size: 1.5em;
+//        margin-bottom: 5px;
+//      }
+//
+//      p:last-child {
+//        font-weight: bold;
+//        margin-top: 10px;
+//      }
+//    }
+//  }
+//}
+
+/* Footer */
+//footer {
+//  background-color: $border-color;
+//  color: #fff;
+//  text-align: center;
+//  padding: 10px;
+//  font-size: 0.8em;
+//  letter-spacing: 1px;
+//  text-transform: uppercase;
+//}
+
+/* Sign In */
+.signin {
+  @extend %page-format;
+
+  form {
+    width: 100%;
+    max-width: 500px;
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid $border-color;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    button[type="submit"] {
+      @include button-style;
+    }
+  }
+}
+
+/* Sign Up */
+//.sign-up {
+//  @extend %page-format;
+//
+//  h2 {
+//    @include h2-style;
+//  }
+//
+//  form {
+//    width: 100%;
+//    max-width: 500px;
+//
+//    label {
+//      margin-top: 10px;
+//      display: block;
+//      margin-bottom: 10px;
+//      font-weight: bold;
+//    }
+//
+//    input[type="text"],
+//    input[type="email"],
+//    input[type="tel"],
+//    input[type="password"],
+//    input[type="description"],
+//
+//    input[type="search-list"] {
+//      width: 100%;
+//      padding: 10px;
+//      margin-bottom: 20px;
+//      border: 1px solid $border-color;
+//      border-radius: 5px;
+//      font-size: 1em;
+//    }
+//
+//    button[type="submit"] {
+//      @include button-style;
+//    }
+//
+//  }
+//}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    h1 {
+      font-size: 2.5em;
+    }
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      margin: 5px 0;
+    }
+  }
+
+  main {
+    .searching {
+      display: flex;
+
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .classifieds {
+      .classified {
+        width: 100%;
+      }
+    }
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+
+    a {
+      margin: 5px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .sign-up,
+  .signin {
+    h1, h2 {
+      font-size: 0.8em;
+    }
+
+    form {
+      label {
+        font-size: 0.8em;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="tel"],
+      input[type="description"] {
+        font-size: 0.8em;
+      }
+    }
+  }
+}

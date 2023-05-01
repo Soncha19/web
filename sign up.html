@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html xmlns:v-on="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Sign up</title>
@@ -28,7 +28,7 @@
         <h1>Sign up</h1>
     </header>
 
-    <form id="signup-form" action="http://localhost:8080/user/register" method="POST">
+    <form id="signup-form" v-on:submit.prevent="submitForm" action="http://localhost:8080/user/register" method="POST">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
 
@@ -55,7 +55,11 @@
         <button type="submit">Sign up</button>
     </form>
 </main>
-<script src="postuser.js"></script>
+<!--<script src="postuser.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
 <footer>
     <p>&copy; 2023 Classifieds Website</p>
 </footer>
