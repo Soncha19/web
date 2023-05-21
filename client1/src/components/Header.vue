@@ -9,7 +9,8 @@ import { RouterLink } from 'vue-router';
 
 
       <ul>
-        <li><a href="new advert.html">Create Ad</a></li>
+        <li><RouterLink to="/category">Categories</RouterLink></li>
+        <li><RouterLink to="/new_add">New Add</RouterLink></li>
         <li><RouterLink to="/profile">My profile</RouterLink></li>
         <li><RouterLink to="/find_user">Search people</RouterLink></li>
       </ul>

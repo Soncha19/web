@@ -48,11 +48,11 @@ export default {
   props: {
     firstName: {
       type: String,
-      required: true
+
     },
     lastName: {
       type: String,
-      required: true
+
     }
   },
   methods: {

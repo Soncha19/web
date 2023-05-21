@@ -6,6 +6,8 @@ import Home from "../components/Home.vue";
 import Signin from "../components/Signin.vue";
 import Profile from "../components/Profile.vue";
 import FindUser from "../components/FindUser.vue";
+import AddAdvert from "../components/AddAdvert.vue";
+import Categories from "../components/Categories.vue";
 
 Vue.use(Router);
 
@@ -35,6 +37,16 @@ export default new Router({
       path: '/find_user',
       name: 'FindUser',
       component: FindUser,
+    },
+    {
+      path: '/new_add',
+      name: 'AddAdvert',
+      component: AddAdvert,
+    },
+    {
+      path: '/category',
+      name: 'Categories',
+      component: Categories,
     },
   ],
 });
